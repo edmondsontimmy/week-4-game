@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var number = Math.floor((Math.random() * 102) + 1);
+	var number = Math.floor((Math.random() * 120) + 19);
 	var userTotal = 0;
 	var wins = 0;
 	var losses = 0;
@@ -24,6 +24,7 @@ $(document).ready(function(){
              userTotal += parseFloat(redValue); 
              $(".userScore").html(userTotal);           
              console.log(redValue);
+             gameOver();
 		});
 	
 		$(".bluecrystal").on('click', function() {
@@ -32,6 +33,7 @@ $(document).ready(function(){
              userTotal += parseFloat(blueValue);
              $(".userScore").html(userTotal); 
              console.log(blueValue);
+             gameOver();
 		});
 	
 		$(".yellowcrystal").on('click', function() {
@@ -40,6 +42,7 @@ $(document).ready(function(){
              userTotal += parseFloat(yellowValue);
              $(".userScore").html(userTotal); 
              console.log(yellowValue);
+             gameOver();
 		});
 		$(".greencrystal").on('click', function() {
 			greenValue += $(this).val();
@@ -47,9 +50,13 @@ $(document).ready(function(){
              userTotal += parseFloat(greenValue);
              $(".userScore").html(userTotal); 
              console.log(greenValue);
+             gameOver();
 		});	
-		
-		if (userTotal > number) {
+	};
+
+	function gameOver() {
+
+			if (userTotal > number) {
 			
 			alert("You Lose!");
 
@@ -70,18 +77,14 @@ $(document).ready(function(){
 			reset();
 			
 		};
-	};
+	}
 
 	function reset() {
 		
-		number = Math.floor((Math.random() * 102) + 1);
-		
-		redValue = Math.floor((Math.random() * 12) + 1);
-		blueValue = Math.floor((Math.random() * 12) + 1);
-		yellowValue = Math.floor((Math.random() * 12) + 1);
-		greenValue = Math.floor((Math.random() * 12) + 1);
-		
+		number = Math.floor((Math.random() * 120) + 19);
 		userTotal = 0;
+		$(".randomNumber").html(number);
+		$(".userScore").html(userTotal);
 		
 	};
 
