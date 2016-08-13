@@ -1,0 +1,63 @@
+*{
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+body{
+	background: url(../images/background.jpg);
+	background-size: cover;
+}
+
+h1{
+	background: orange;
+	color: white;
+	width: 100%;
+	max-width: 300px;
+}
+
+img{
+	width: 85px;
+	height: 100px;
+}
+
+#images{
+	clear: both;
+}
+
+#generatedNumber{
+	background: green;
+	color: black;
+	width: 100%;
+    max-width: 200px;
+    float: left;
+    padding: 40px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#wlcounter{
+	background: skyblue;
+	color: black;
+	width: 100%;
+    max-width: 100px;
+    float: left;
+}
+
+#yourScore{
+	background: teal;
+	color: white;
+	clear: both;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.instructions{
+	background: antiquewhite;
+	color: green;
+	width: 100%;
+	max-width: 450px;
+}
